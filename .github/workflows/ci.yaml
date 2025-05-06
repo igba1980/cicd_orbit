@@ -20,6 +20,11 @@ jobs:
         run: |
           docker build -t igba1980/cicd_orbit:${{env.SHORT_SHA}} .
 
+      - name: View action secrets
+        run: |
+          echo "DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}"
+          echo "DOCKERHUB_TOKEN=${{ secrets.DOCKERHUB_TOKEN
+
       - name: Login to Docker Hub
         run: |
           echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
