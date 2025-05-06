@@ -18,12 +18,11 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t igba1980/cicd_orbit:${{env.SHORT_SHA}} .
+          docker build -t igba1980/cicd_orbit:${{ env.SHORT_SHA }} .
 
       - name: View action secrets
         run: |
-          echo "DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}"
-          echo "DOCKERHUB_TOKEN=${{ secrets.DOCKERHUB_TOKEN
+          echo DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}
 
       - name: Login to Docker Hub
         run: |
