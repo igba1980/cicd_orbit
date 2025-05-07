@@ -1,6 +1,6 @@
 image:
   repository: iujege/cicd_orbit
-  tag: 5037592
+  tag: cfcae10
   pullPolicy: IfNotPresent
 
 service:
