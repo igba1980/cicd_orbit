@@ -67,6 +67,7 @@ terraform apply
 
 Port-forward or expose ArgoCD via ingress to access the UI:
 ```
+    kubectl apply -f argoscd-app.yaml
     kubectl port-forward svc/argocd-server -n argocd 8081:443
 ```
 
@@ -89,5 +90,9 @@ Default login:
 
 ⸻
 
-Let me know if you’d like help generating badges, a project diagram, or auto-generating the ArgoCD Application resource in Terraform.
+Debug
+```
+argocd app sync cicd-orbit
+argocd app logs cicd-orbit
+```
 
