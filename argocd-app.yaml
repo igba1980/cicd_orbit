@@ -9,9 +9,6 @@ spec:
     repoURL: 'https://github.com/igba1980/cicd_orbit'
     targetRevision: HEAD
     path: cicd-orbit
-    helm:
-      valueFiles:
-        - values.yaml
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
