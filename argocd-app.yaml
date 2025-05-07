@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cicd-orbit-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/igba1980/cicd_orbit'
+    targetRevision: HEAD
+    path: cicd-orbit
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

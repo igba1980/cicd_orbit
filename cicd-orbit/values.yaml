@@ -1,0 +1,17 @@
+image:
+  repository: iujege/cicd_orbit
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+
+ingress:
+  enabled: true
+
+serviceAccount:
+  enabled: true
+
+autoscaling:
+  enabled: true
