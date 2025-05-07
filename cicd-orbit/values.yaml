@@ -1,6 +1,6 @@
 image:
   repository: iujege/cicd_orbit
-  tag: 53c99f0
+  tag: 1dcf41f
   pullPolicy: IfNotPresent
 
 service:
@@ -15,3 +15,6 @@ serviceAccount:
 
 autoscaling:
   enabled: true
+  minReplicas: 1
+  maxReplicas: 2
+  targetCPUUtilizationPercentage: 80
