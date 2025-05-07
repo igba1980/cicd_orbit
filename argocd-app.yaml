@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cicd-orbit-app
+  name: cicd-orbit
   namespace: argocd
 spec:
   project: default
