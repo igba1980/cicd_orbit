@@ -1,6 +1,6 @@
 image:
   repository: iujege/cicd_orbit
-  tag: dd53e7e
+  tag: 1dcf41f
   pullPolicy: IfNotPresent
 
 service:
@@ -8,13 +8,10 @@ service:
   port: 8080
 
 ingress:
-  enabled: true
+  enabled: false
 
 serviceAccount:
-  enabled: true
+  enabled: false
 
 autoscaling:
-  enabled: true
-  minReplicas: 1
-  maxReplicas: 2
-  targetCPUUtilizationPercentage: 80
+  enabled: false
